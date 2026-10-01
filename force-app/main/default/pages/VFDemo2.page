@@ -1,0 +1,20 @@
+<apex:page >
+ <apex:pageBlock title="Information Section "> 
+     <apex:pageBlockSection title="Aprx page block first section">       
+          {!$User.FirstName & '-' & $User.LastName}<tr></tr>
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="Apex page block Second section">         
+         Hello world Second page display
+        <p>
+            Today's Date = {!Today()}
+        </p>p>
+                
+        <p>
+            Current year's date = {!Year(Today())}
+        </p>
+        <p>
+             {!If(Contains('Salesfroce.com', 'Force.com'),'Yes', 'No')}
+        </p>
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

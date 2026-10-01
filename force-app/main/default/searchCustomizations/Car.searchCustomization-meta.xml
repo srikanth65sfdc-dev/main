@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchCustomization xmlns="http://soap.sforce.com/2006/04/metadata">
+    <channel>GlobalSearch</channel>
+    <masterLabel>Car</masterLabel>
+    <objectOverride>
+        <fieldOverride>
+            <fieldApiName>Status__c</fieldApiName>
+            <searchable>true</searchable>
+        </fieldOverride>
+        <objectApiName>Car__c</objectApiName>
+    </objectOverride>
+    <selectedProfile>Admin</selectedProfile>
+</SearchCustomization>

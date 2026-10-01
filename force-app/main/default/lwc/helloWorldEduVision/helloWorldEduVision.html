@@ -1,0 +1,48 @@
+<template>
+<lightning-card title = "My Second LWC Component">
+    <div class="slds-border_right"> 
+        <!--Static information-->
+    <h2> Hello VEMURI SRIKANTH !!! </h2>
+    </div>
+    <!--one way data binding-->
+    <h2>{message}</h2>
+   <!--two way data binding-->
+    <div class="slds-m-var-around_medium"> 
+         <lightning-input label="Welcome" onchange={handleChange}></lightning-input>
+         <h2>Name of the Bank : {Bankname}</h2>
+    <!--<h2>  Senior Citizen to the Bank!!! </h2>-->
+    </div>
+    <div class="slds-m-var-around_medium"> 
+         <lightning-input label="Salary" onchange={handleChange1}></lightning-input>
+         <h2>Salary : {Salary}</h2>
+    <!--<h2>  Senior Citizen to the Bank!!! </h2>-->
+    </div>
+&nbsp;
+    <div class="slds-m-var-around_medium"> 
+         <lightning-button variant="Brand" label="Show Text" title="titleName" onclick={handleClick}></lightning-button> &nbsp;&nbsp;
+         <lightning-button variant="Brand" label="Hide Text" title="titleName" onclick={handleClickHide}></lightning-button>
+          <template if:true={isShow}>
+            <h2> Thank you for Clicking the above Button</h2>
+          </template>
+    </div> &nbsp;&nbsp;
+    <div class="slds-m-var-around_medium"> 
+         <lightning-button variant="Brand" label="Wrap Text" title="Wrap Text" onclick={handleWrap}></lightning-button> &nbsp;&nbsp;
+          <template if:false={isWrap}>
+            <h2> Thank you for wrapping the message</h2>
+          </template>
+    </div> &nbsp;&nbsp;
+    <div class="slds-m-var-around_medium"> 
+         <lightning-button variant="Brand" label="Toggle"  onclick={handleToggleText}></lightning-button> &nbsp;&nbsp;
+          <template if:true={ToggleText}>
+            <h2> Toggle hide message</h2>
+          </template>
+    </div> &nbsp;&nbsp;
+    <div class="slds-m-var-around_medium"> 
+         <lightning-button variant="Brand" label={toggleLabelUpdate}  onclick={handleToggleText}></lightning-button> &nbsp;&nbsp;
+          <template if:true={ToggleText}>
+            <h2> Toggle hide message</h2>
+          </template>
+    </div> &nbsp;&nbsp;
+
+</lightning-card> 
+</template>

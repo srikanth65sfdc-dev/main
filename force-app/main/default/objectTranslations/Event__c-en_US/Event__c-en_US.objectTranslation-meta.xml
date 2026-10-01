@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Events</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- EndDate/Time_must_be at least _1_day_ahead the start date. --></errorMessage>
+        <name>End_date_atleast_one_day_ahead_SD</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Location must be selected. --></errorMessage>
+        <name>Event_type_is_Inperson_Location_must</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If the event type is virtual then location no required. --></errorMessage>
+        <name>Event_type_is_virtual_Location_not_must</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- frequency is not selected --></errorMessage>
+        <name>Recurring_on_Check_is_Unchecked</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Provide the frequency field --></errorMessage>
+        <name>Recurring_on_Check_is_Yes</name>
+    </validationRules>
+</CustomObjectTranslation>

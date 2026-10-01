@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring_on_Check_is_Unchecked</fullName>
+    <active>true</active>
+    <description>if recurring is unchecked then frequency field is not selected.</description>
+    <errorConditionFormula>AND( Recurring__c =FALSE, NOT( ISPICKVAL( Frequency__c , &quot;NULL&quot;) ) )</errorConditionFormula>
+    <errorDisplayField>Frequency__c</errorDisplayField>
+    <errorMessage>frequency is not selected</errorMessage>
+</ValidationRule>

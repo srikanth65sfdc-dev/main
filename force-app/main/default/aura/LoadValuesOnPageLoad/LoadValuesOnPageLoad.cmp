@@ -1,0 +1,11 @@
+<aura:component  controller = "MapData">
+    <aura:handler name ="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute type="Map" name="foodMap"/>
+    <p>{!v.foodMap.Delhi}</p>
+    <p>{!v.foodMap.Hyderabad}</p>
+    <p>{!v.foodMap.Chennai}</p>
+    <p>{!v.foodMap.Pune}</p>
+    <p>{!v.foodMap.Kanpur}</p>
+    <p>Inside Component</p>
+    
+</aura:component>

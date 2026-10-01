@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Expense_Compact_Layout</fullName>
+    <fields>Bank_Account__c</fields>
+    <fields>Expense_Date_time__c</fields>
+    <fields>IFSC_Code__c</fields>
+    <fields>Mode_of_Payment__c</fields>
+    <fields>Pan_Card__c</fields>
+    <fields>Amount__c</fields>
+    <label>Custom Expense Compact  Layout</label>
+</CompactLayout>

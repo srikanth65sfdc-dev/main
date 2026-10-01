@@ -1,0 +1,7 @@
+<aura:component controller ="ContactComponentApexController" >
+    <aura:attribute name ="conRecords" type="Contact[]"/>
+    <lightning:button label ="Get Contacts" onclick="{!c.getContacts}"/>
+    <aura:iteration var ="conRec" items="{!v.conRecords}">
+        <p><b>{!conRec.Name}</b></p>
+    </aura:iteration>
+</aura:component>

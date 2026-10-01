@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <label>Business Unit</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DBA</fullName>
+                <default>false</default>
+                <label>DBA</label>
+            </value>
+            <value>
+                <fullName>DSOM</fullName>
+                <default>false</default>
+                <label>DSOM</label>
+            </value>
+            <value>
+                <fullName>IZOT</fullName>
+                <default>false</default>
+                <label>IZOT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

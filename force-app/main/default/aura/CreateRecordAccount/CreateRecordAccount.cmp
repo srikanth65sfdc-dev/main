@@ -1,0 +1,27 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader" controller = "CreateRecordController">
+    <aura:attribute name="name" type="String"/>
+	<aura:attribute name="type" type="String"/>
+    <aura:attribute name="annualRevenue" type="Currency"/>
+    
+    <aura:attribute name="options" type="list" 
+                    default="[{'label':'Analyst','value':'Analyst'},{'label':'Competitor','value':'Competitor'},{'label':'Consulting','value':'Consulting'},{'label':'Customer','value':'Customer'},{'label':'Partner','value':'Partner'}]"/>
+    
+    <center>
+    	<h1 class="inlineTitle slds-p-top--large slds-p-horizontal--medium slds-p-bottom--medium slds-text-heading--medium" style="font-size:20px;">
+        	Custom Create Organization
+            <hr size="3" noshade=""></hr>
+        </h1>
+    </center>
+    <h2 class="slds-section__title slds-theme--shade">
+    	New Organization Information
+    </h2>
+    <div class="slds-p-around_medium">
+        <lightning:input type="text" name="Name" required="true" value="{!v.name}" label="Name" maxlength="255"/>
+        <lightning:input type="number" name="Annual Revenue" value="{!v.annualRevenue}" label="Annual Revenue" formatter="currency"/>
+        <lightning:combobox name="Type" label="Type" value="dummy" placeholder="Select Type" options="{!v.options}" onchange="{!c.handleChange}"/>
+    </div>
+    <center>
+        <lightning:button variant="Brand" label="Save" title="Save" onclick="{!c.save}"/>
+        <lightning:button variant="Neutral" label="Cancel" title="Cancel" onclick="{!c.cancel}"/>
+    </center>
+</aura:component>

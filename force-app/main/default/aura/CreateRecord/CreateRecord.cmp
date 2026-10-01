@@ -1,0 +1,23 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader" controller = "CreateRecordController">
+    <aura:attribute name="firstname" type="String"/>
+	<aura:attribute name="lastname" type="String"/>
+     
+     
+    <center>
+    	<h1 class="inlineTitle slds-p-top--large slds-p-horizontal--medium slds-p-bottom--medium slds-text-heading--medium" style="font-size:20px;">
+        	Custom Create Contact
+            <hr size="3" noshade=""></hr>
+        </h1>
+    </center>
+    <h2 class="slds-section__title slds-theme--shade">
+    	New Contact Information
+    </h2>
+    <div class="slds-p-around_medium">
+        <lightning:input type="text" name="FirstName" required="false" value="{!v.FirstName}" label="FirstName" maxlength="255"/>
+        <lightning:input type="text" name="LastName" required="true" value="{!v.LastName}" label="LastName" maxlength="255"/>
+    </div>    
+    <center>
+        <lightning:button variant="Brand" label="Save" title="Save" onclick="{!c.save}"/>
+        <lightning:button variant="Neutral" label="Cancel" title="Cancel" onclick="{!c.cancel}"/>
+    </center>
+</aura:component>

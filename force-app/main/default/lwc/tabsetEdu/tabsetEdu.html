@@ -1,0 +1,31 @@
+<template>
+    <lightning-card  variant="Narrow" >
+        <lightning-tabset variant="scoped" active-tab-value="two">
+        <lightning-tab label="Tab 1" variant="scoped">
+            One Content !
+        </lightning-tab>
+        <lightning-tab label="Tab 2" title="2nd tab extended title">
+            Two Content !
+        </lightning-tab>
+        <lightning-tab label="Tab 3" value="two">
+            Three Content !
+        </lightning-tab>
+        <template if:true={IsShowTabFour}>
+         <lightning-tab label="Tab 4">
+            <h2> Showing Tab Four!!!</h2>
+        </lightning-tab>
+        </template>
+      </lightning-tabset>
+      <lightning-button variant="Toogle Tab" label="Toogle Tab"   onclick={ToggleShowNextTab}></lightning-button>
+    </lightning-card>
+    &nbsp;&nbsp;
+    <lightning-card  variant="Narrow">
+       <lightning-tabset variant="scoped">
+        <template for:each={Tabs} for:item="Tab">
+            <lightning-tab label={tab.label} key={tab.value} value={tab.value} onactive={handleActive}>
+            {tab.content}
+            </lightning-tab>
+         </template>
+       </lightning-tabset>  
+    </lightning-card>
+</template>

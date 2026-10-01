@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Expense_Type__c</field>
+            <operation>equals</operation>
+            <value>Food, Leisure, Fuel</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>5000</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Expenses</relationshipLabel>
+    <relationshipName>Expenses</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

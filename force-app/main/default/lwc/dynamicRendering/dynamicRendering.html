@@ -1,0 +1,17 @@
+<template>
+<lightning-card title="Account List">
+        <template if:true={filteredAccounts}>
+            <ul>
+                <template for:each={filteredAccounts} for:item="account">
+                    <li key={account.Id}>
+                        {account.Name} - {account.Industry}
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:false={filteredAccounts}>
+            <p>No accounts found.</p>
+        </template>
+        <lightning-button label="Refresh Accounts" title = "Disappear agri records" onclick={handleFilter}></lightning-button>
+    </lightning-card>
+</template>

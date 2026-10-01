@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exp_Date_should_not_be_Earlier_than_30da</fullName>
+    <active>true</active>
+    <errorConditionFormula>(TODAY() -DATEVALUE( Expense_Date_time__c ))&gt;30</errorConditionFormula>
+    <errorDisplayField>Expense_Date_time__c</errorDisplayField>
+    <errorMessage>You Cannot claim for an expense which is more than 30 days</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Investment Category --></label>
+    <name>Investment_Category__c</name>
+    <picklistValues>
+        <masterLabel>BU Internal</masterLabel>
+        <translation><!-- BU Internal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BU Services Project</masterLabel>
+        <translation><!-- BU Services Project --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

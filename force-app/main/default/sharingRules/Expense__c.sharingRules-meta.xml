@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Expense_starts</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Expense starts with code Exp</label>
+        <sharedTo>
+            <group>System_administerators_group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>equals</operation>
+            <value>Exp</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Expense_access_for_all_users</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>provide access to all users which are created by admin</description>
+        <label>Expense access for all users</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>APAC_Director</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <group>System_administerators_group</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>
